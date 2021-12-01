@@ -1,0 +1,9 @@
+const Homeh1 = () => {
+  return (
+    <h1>
+      Home Page
+    </h1>
+  )
+}
+
+export default Homeh1

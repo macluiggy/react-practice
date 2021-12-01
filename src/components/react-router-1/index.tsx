@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 // const elements = ['item1', 'item2', 'item3']
 const ReactRouter1 = () => {
   return (
-    <Router>
       <div>
         <nav>
           <ul>
@@ -26,7 +25,6 @@ const ReactRouter1 = () => {
           <Route path='/users' element={<Users />} />
         </Routes>
       </div>
-    </Router>
   )
 }
 
