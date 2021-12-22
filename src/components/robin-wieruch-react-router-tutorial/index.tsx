@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Outlet } from "react-router-dom";
 
 const App = () => {
   return (
@@ -7,22 +7,10 @@ const App = () => {
 
       <Navigation />
       <Routes>
-        <Route
-          path="home"
-          element={
-            <Layout>
-              <Home />
-            </Layout>
-          }
-        />
-        <Route
-          path="users"
-          element={
-            <Layout>
-              <Users />
-            </Layout>
-          }
-        />
+        <Route element={<Layout />}>
+          <Route path="/home" element={<Home />} />
+          <Route path="/users" element={<Users />} />
+        </Route>
       </Routes>
     </>
   );
@@ -58,10 +46,10 @@ const Users = () => {
   );
 };
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
-    <main style={{ padding: "10rem 0", backgroundColor: "red" }}>
-      {children}
+    <main style={{ padding: "1rem 0", backgroundColor: "red" }}>
+      <Outlet />
     </main>
   );
 };
