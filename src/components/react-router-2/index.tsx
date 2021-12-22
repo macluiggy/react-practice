@@ -4,6 +4,7 @@ import {
   Route,
   Link,
   useNavigate,
+  useParams,
 } from "react-router-dom";
 //create a list of 10 users with id, name, email, phone, website
 const users = [
@@ -33,13 +34,15 @@ const ReactRouter2 = () => {
       {users.map((user) => {
         return (
           <div key={user.id}>
-            <h2>{user.name}</h2>
-            <Link to={`/${user.id}`}>got to</Link>
-            <p>{user.username}</p>
-            <p>{user.age}</p>
-            {/* <button onClick={() => navigate(`/${user.id}`)}>go to user</button> */}
+            {/* <Link to={`/user/${user.id}`}>got to</Link> */}
+            {/* <button onClick={() => navigate(`/user/${user.id}`)}>
+              go to user
+            </button> */}
             <Routes>
-              <Route path={`/${user.id}`} element={<User {...user} />}></Route>
+              <Route
+                path={`/user/${user.id}`}
+                element={<User {...user} />}
+              ></Route>
             </Routes>
           </div>
         );

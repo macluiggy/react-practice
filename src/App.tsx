@@ -6,6 +6,7 @@ import ReactRouter1 from "./components/react-router-1";
 import ReactRouter2 from "./components/react-router-2";
 import RWRRT from "./components/robin-wieruch-react-router-tutorial/index";
 import PedroTechReactRouterV6 from "./components/pedro-tech-react-routerv6/index";
+import FaztReactRouterV6 from "./components/fazt-react-routerv6";
 // import FCC_React_router_tutorial from './components/fcc-react-router-tutorial/index.js'
 // import {BrowserRouter} from 'react-router-browser'
 
@@ -14,9 +15,10 @@ function App() {
     <div className="App">
       {/* <ReactRouter2 /> */}
       {/* <ReactRouter1 /> */}
-      <PedroTechReactRouterV6 />
+      {/* <PedroTechReactRouterV6 /> */}
       {/* <FCC_React_router_tutorial /> */}
       {/* <RWRRT /> */}
+      <FaztReactRouterV6 />
     </div>
   );
 }
