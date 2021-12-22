@@ -50,6 +50,7 @@ const UserPage = () => {
           <h1>{user.name}</h1>
           <p>{user.age}</p>
           <p>{user.username}</p>
+          <Link to="/users">Back</Link>
         </div>
       ) : (
         <div>
