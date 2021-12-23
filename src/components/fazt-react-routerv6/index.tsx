@@ -6,6 +6,7 @@ import {
   useParams,
   Navigate,
 } from "react-router-dom";
+import "./index.scss";
 const users = [
   {
     id: 1,
@@ -26,12 +27,21 @@ const users = [
     age: 45,
   },
 ];
+const Home = () => {
+  return (
+    <div>
+      <h1>Home</h1>
+      <Link to={"/users"}>Go to users</Link>
+    </div>
+  );
+};
 const FaztReactRouterV6 = () => {
   return (
     <Routes>
       <Route path="/usuarios/" element={<Navigate to="/users" />} />
       <Route path="/users/" element={<UsersPage />} />
       <Route path="/users/:id" element={<UserPage />} />
+      <Route path="/" element={<Home />}></Route>
     </Routes>
   );
 };
@@ -44,6 +54,7 @@ const UserPage = () => {
       style={{
         backgroundColor: "gray",
       }}
+      className="user-page"
     >
       {user ? (
         <div>
@@ -62,7 +73,7 @@ const UserPage = () => {
 };
 const UsersPage = () => {
   return (
-    <div>
+    <div className="users-page">
       {users.map((user) => {
         return (
           <div
@@ -80,6 +91,7 @@ const UsersPage = () => {
           </div>
         );
       })}
+      <Link to="/">Go to homepage</Link>
     </div>
   );
 };
